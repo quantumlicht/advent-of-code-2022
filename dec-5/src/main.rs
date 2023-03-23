@@ -173,10 +173,10 @@ fn part_one() -> std::io::Result<()> {
         println!("{}", l);
         println!("before \nfrom {:?}  to{:?}", stacks[i], stacks[j]);
         // part 1
-        // for idx in 0..qnt {
-        //     let mut ele = stacks[i].pop_front().unwrap();
-        //     stacks[j].push_front(ele);
-        // }
+        for idx in 0..qnt {
+            let mut ele = stacks[i].pop_front().unwrap();
+            stacks[j].push_front(ele);
+        }
         // part2
         let mut tmp_stack = vec![];
         for idx in 0..qnt {
